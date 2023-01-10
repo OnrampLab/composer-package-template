@@ -3,19 +3,31 @@ root = true
 [*]
 charset = utf-8
 end_of_line = lf
-insert_final_newline = true
 indent_style = space
 indent_size = 2
+insert_final_newline = true
 trim_trailing_whitespace = true
+
+[{*.md,*.diff}]
+trim_trailing_whitespace = false
+
+[{*.php,*.py,*.md}]
+indent_size = 4
+
+[*.json]
+# The JSON files contain newlines inconsistently
+insert_final_newline = ignore
 
 [composer.json]
 indent_size = 4
 
-[*.md]
-trim_trailing_whitespace = false
+[**.min.js]
+indent_style = ignore
+insert_final_newline = ignore
 
-[*.yml]
-indent_size = 2
+[docs/**.txt]
+max_line_length = 79
 
-[*.php]
-indent_size = 4
+[**/vendor/**]
+indent_style = ignore
+indent_size = ignore
