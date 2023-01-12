@@ -63,6 +63,7 @@ return [
     'remove' => [
         SlevomatCodingStandard\Sniffs\TypeHints\DeclareStrictTypesSniff::class,
         NunoMaduro\PhpInsights\Domain\Insights\ForbiddenNormalClasses::class,
+        SlevomatCodingStandard\Sniffs\TypeHints\DisallowMixedTypeHintSniff::class,
     ],
 
     'config' => [
